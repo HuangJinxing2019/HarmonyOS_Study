@@ -5,6 +5,7 @@ import { ElementaryCourse } from "./ElementaryCourse/Index";
 import { EnablementProp } from "./EnablementView/EnablementItem";
 import { EnablementView } from "./EnablementView/Index";
 import { TopSwiper } from "./TopSwiper/Index";
+import { hilog } from "@kit.PerformanceAnalysisKit";
 
 @Component
 export struct Home{
@@ -12,6 +13,12 @@ export struct Home{
   @State backIcon: boolean = false;
   @State enablementList: EnablementProp[] = enablementList
   @State courseList: CourseProp[] = courseList
+
+
+  aboutToAppear(): void {
+    hilog.debug(0x0000, '组件生命周期-Home', 'aboutToAppear')
+  }
+
 
   onWillScroll(xOffset: number, yOffset: number, scrollState: ScrollState){
     console.log(xOffset.toString(), yOffset.toString(), scrollState)
@@ -42,7 +49,6 @@ export struct Home{
         console.log(Edge[side])
       })
     }
-    .height('100%')
     .width('100%')
     .backgroundColor('#F1F3F5')
   }
