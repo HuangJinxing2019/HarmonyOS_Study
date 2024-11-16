@@ -31,7 +31,7 @@ struct ComponentCommunication{
   build() {
     NavDestination(){
       Column(){
-        Text('组件通信')
+        Text('组件通信2333323')
       }
     }
     .title('组件通信')

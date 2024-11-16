@@ -5,13 +5,13 @@
         "name": "default",
         "type": "HarmonyOS",
         "material": {
-          "certpath": "C:\\Users\\73172\\.ohos\\config\\default_MyApplication_KYk0wLbbhah59TrUouxyaUwTSoveKoJ-yiAvf9Qygk4=.cer",
-          "storePassword": "0000001B5EF6E26F502F561745AC1C5FAB9AC119DF457C9FB2932F6499E6FFFEB4A2546FDAD43CE830C18B",
+          "certpath": "C:\\Users\\hjx\\.ohos\\config\\default_HarmonyOS_Study_9fFiRgdI7pfSHl1Qsqlk-vz8_uu_Cr77GlkNrjk94G8=.cer",
+          "storePassword": "0000001BAABD64CD1CA09678C6F28C3A61388B60E3DBE33DE029FAF96281ABD442DC447FC8F88210E904B0",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001BA796A9B677D9C7E4E67261B54CF01B4E745651F39366D37197EE8361D968EBF1E75FA191CC43F5",
-          "profile": "C:\\Users\\73172\\.ohos\\config\\default_MyApplication_KYk0wLbbhah59TrUouxyaUwTSoveKoJ-yiAvf9Qygk4=.p7b",
+          "keyPassword": "0000001BAFB896CEE987330727E5F3867A994DF7720555740F562C2771569F51D734ACD2B08C64ACBDC368",
+          "profile": "C:\\Users\\hjx\\.ohos\\config\\default_HarmonyOS_Study_9fFiRgdI7pfSHl1Qsqlk-vz8_uu_Cr77GlkNrjk94G8=.p7b",
           "signAlg": "SHA256withECDSA",
-          "storeFile": "C:\\Users\\73172\\.ohos\\config\\default_MyApplication_KYk0wLbbhah59TrUouxyaUwTSoveKoJ-yiAvf9Qygk4=.p12"
+          "storeFile": "C:\\Users\\hjx\\.ohos\\config\\default_HarmonyOS_Study_9fFiRgdI7pfSHl1Qsqlk-vz8_uu_Cr77GlkNrjk94G8=.p12"
         }
       }
     ],
