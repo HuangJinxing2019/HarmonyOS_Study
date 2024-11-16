@@ -1,0 +1,9 @@
+{
+  "routerMap": [
+    {
+      "name": "ComponentCommunication",
+      "pageSourceFile": "src/main/ets/pages/ComponentCommunication/Index.ets",
+      "buildFunction": "CommunicationBuilder"
+    }
+  ]
+}
