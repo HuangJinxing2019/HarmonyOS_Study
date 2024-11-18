@@ -1,37 +1,92 @@
-import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Theme } from '@ohos.arkui.theme';
+import { Child1 } from './Child1'
+import { Child2 } from './Child2'
 
 @Builder
 export function CommunicationBuilder(){
   ComponentCommunication()
 }
+
+@Observed
+class Child{
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+
+@Observed
+class Student{
+  age: number;
+  child: Child;
+  constructor(age: number , child: Child) {
+    this.age = age;
+    this.child = child
+  }
+}
+
+@Component
+struct TestCom{
+  @ObjectLink child: Child
+  build() {
+    Text(this.child.name)
+      .onClick(() => {
+        this.child.name = '00000'
+      })
+  }
+}
+@Component
+struct TestCom2{
+  @Prop child: Child
+  build() {
+    Text(this.child.name)
+  }
+}
+
 @Preview
 @Component
 struct ComponentCommunication{
   @Consume('NavPathStack') pageInfos: NavPathStack;
+  @State count: number = 0;
+  @State student: Student = new Student(18, new Child('王五'));
 
-  aboutToAppear(): void {
-    hilog.debug(0x0000, '生命周期钩子', 'aboutToAppear')
-    hilog.debug(0x0000, '生命周期钩子', JSON.stringify(this.pageInfos.getParamByName('ComponentCommunication')))
+  add(num: number){
+    this.count += num
   }
-
-  onDidBuild(): void {
-    hilog.debug(0x0000, '生命周期钩子', 'onDidBuild')
-  }
-
-  aboutToDisappear(): void {
-    hilog.debug(0x0000, '生命周期钩子', 'aboutToDisappear')
-  }
-
-  onWillApplyTheme(theme: Theme): void {
-    hilog.debug(0x0000, '生命周期钩子', 'onWillApplyTheme')
-    // hilog.debug(0x0000, '生命周期钩子', JSON.stringify(theme))
+  setName(name: string){
+    this.student.child.name = name
   }
 
   build() {
     NavDestination(){
-      Column(){
-        Text('组件通信2333323')
+      Stack(){
+        Column(){
+          Text('@State')
+          Row(){
+            Text('Parent：')
+              .fontSize(24)
+              .fontWeight(700)
+            Text(this.count?.toString())
+              .margin({ top: 10 })
+              .fontSize(18)
+          }
+          Row(){
+            Child1({ count: this.count, add: this.add })
+            Child2({ count: this.count, add: this.add })
+          }
+          Text(this.student.age.toString())
+          TestCom({ child: this.student.child })
+          TestCom2({ child: this.student.child })
+          Button('修改名称')
+            .onClick(() => {
+              this.student.age = 24
+              this.student.child.name = '赵六'
+            })
+        }
+        .alignItems(HorizontalAlign.Start)
+        .width('100%')
+        .height(500)
+        .backgroundColor(Color.Orange)
+        .padding(10)
       }
     }
     .title('组件通信')

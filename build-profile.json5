@@ -5,13 +5,13 @@
         "name": "default",
         "type": "HarmonyOS",
         "material": {
-          "certpath": "C:\\Users\\hjx\\.ohos\\config\\default_HarmonyOS_Study_9fFiRgdI7pfSHl1Qsqlk-vz8_uu_Cr77GlkNrjk94G8=.cer",
-          "storePassword": "0000001BAABD64CD1CA09678C6F28C3A61388B60E3DBE33DE029FAF96281ABD442DC447FC8F88210E904B0",
+          "certpath": "C:\\Users\\73172\\.ohos\\config\\default_HarmonyOS_Study_B9c6Q8xOdhPe8JzeKeczvcgALCbJXRPIN7VrZlebj88=.cer",
+          "storePassword": "0000001B571C20D2791F4295EAB8D60D461F8096E3FC1F57D68AD40AC612AC915AC1D76CB4CBAB4C78FCFD",
           "keyAlias": "debugKey",
-          "keyPassword": "0000001BAFB896CEE987330727E5F3867A994DF7720555740F562C2771569F51D734ACD2B08C64ACBDC368",
-          "profile": "C:\\Users\\hjx\\.ohos\\config\\default_HarmonyOS_Study_9fFiRgdI7pfSHl1Qsqlk-vz8_uu_Cr77GlkNrjk94G8=.p7b",
+          "keyPassword": "0000001BF3A6A7820602A95D830D74E8805205AEFE95A904367B0EF0A777235A2E1DAAD21D20ACACA305F7",
+          "profile": "C:\\Users\\73172\\.ohos\\config\\default_HarmonyOS_Study_B9c6Q8xOdhPe8JzeKeczvcgALCbJXRPIN7VrZlebj88=.p7b",
           "signAlg": "SHA256withECDSA",
-          "storeFile": "C:\\Users\\hjx\\.ohos\\config\\default_HarmonyOS_Study_9fFiRgdI7pfSHl1Qsqlk-vz8_uu_Cr77GlkNrjk94G8=.p12"
+          "storeFile": "C:\\Users\\73172\\.ohos\\config\\default_HarmonyOS_Study_B9c6Q8xOdhPe8JzeKeczvcgALCbJXRPIN7VrZlebj88=.p12"
         }
       }
     ],
