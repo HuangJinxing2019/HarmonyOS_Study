@@ -3,13 +3,13 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 
 export { EnablementProp }
 
-@Component
+@ComponentV2
 export struct EnablementView{
-  @Prop data: EnablementProp[];
+  @Param data: EnablementProp[] = [];
 
-  @Consume('NavPathStack') pageInfos: NavPathStack;
-  onWillScroll: (xOffset: number, yOffset: number, scrollState: ScrollState) => void = () => {}
-  onScrollEdge: (sid: Edge) => void = () => {}
+  @Consumer('NavPathStack') pageInfos: NavPathStack = new NavPathStack();
+  @Event onWillScroll: (xOffset: number, yOffset: number, scrollState: ScrollState) => void = () => {}
+  @Event onScrollEdge: (sid: Edge) => void = () => {}
 
   build() {
     Column(){

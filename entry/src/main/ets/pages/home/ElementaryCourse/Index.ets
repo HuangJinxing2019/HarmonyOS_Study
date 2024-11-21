@@ -1,9 +1,9 @@
 import { Course, CourseProp } from './Course'
 export { CourseProp }
 
-@Component
+@ComponentV2
 export struct ElementaryCourse{
-  @Prop courseList: CourseProp[]
+  @Param courseList: CourseProp[] = [];
 
   build() {
     Column(){
