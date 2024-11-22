@@ -35,7 +35,7 @@ struct Index {
 
   build() {
     Navigation(this.pageInfos){
-      Button('count + 1').onClick(() => this.count++)
+      // Button('count + 1').onClick(() => this.count++)
       Tabs({ index: 0, barPosition: BarPosition.End }){
         ForEach(this.tabBarList, (item: TabBarItem, index: number) => {
           TabContent(){
